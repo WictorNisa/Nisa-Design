@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+ margin: 0;
+ padding: 0;
+ font-family: 'Montserrat', sans-serif;
+ overflow-x:hidden;
+}
+
+main{
+  overflow-x:hidden;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+/* ==================HEADER==================== */
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #080400;
+}
+
+.logo {
+  color: #E1E5F2;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2em;
+}
+
+.nav-links{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding-left: 0;
+  position: absolute;
+  right: 0px;
+  height: 92vh;
+  top: 8vh;
+  background-color: #272838;
+  opacity: 8;
+  transform: translateX(100%);
+  overflow: hidden;
+}
+
+.nav-links li {
+  list-style: none;
+  padding: 2em 0 2em 0;
+  opacity: 1;
+}
+
+.nav-links a {
+  color: #E1E5F2;
+  letter-spacing: 2px;
+  font-weight: lighter;
+}
+
+.burger {
+  cursor: pointer;
+  display: block;
+}
+
+.burger div {
+  width: 24px;
+  height: 3px;
+  background-color: #E1E5F2;
+  margin: 5px;
+  clip-path: polygon(14% 7%, 100% 0%, 83% 100%, 0% 100%);
+}
+
+.burger div:nth-last-child(1) {
+  width: 33px;
+}
+
+.burger div:nth-last-child(2) {
+  width: 29px;
+}
+
+.nav-active { 
+  transform: translateX(0%);
+  transition: transform ease-in .5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* DESKTOP VIEW
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #080400;
+}
+
+.logo {
+  color: #E1E5F2;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2em;
+}
+
+.nav-links{
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+  padding-left: 0;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: #E1E5F2;
+  letter-spacing: 2px;
+  font-weight: lighter;
+}
+
+.burger div {
+  width: 24px;
+  height: 3px;
+  background-color: #E1E5F2;
+  margin: 5px;
+      clip-path: polygon(14% 7%, 100% 0%, 83% 100%, 0% 100%);
+}
+
+.burger div:nth-last-child(1) {
+  width: 33px;
+}
+
+.burger div:nth-last-child(2) {
+  width: 29px;
+} */
