@@ -6,7 +6,6 @@ html, body {
  margin: 0;
  padding: 0;
  font-family: 'Montserrat', sans-serif;
- overflow-x: auto;
 }
 
 
@@ -75,6 +74,8 @@ nav {
   background-color: #080400;
   position: sticky;
   top: 0px;
+  opacity: .98;
+  z-index: 1;
 }
 
 .logo {
