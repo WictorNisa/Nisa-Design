@@ -73,6 +73,8 @@ nav {
   align-items: center;
   min-height: 8vh;
   background-color: #080400;
+  position: sticky;
+  top: 0px;
 }
 
 .logo {
