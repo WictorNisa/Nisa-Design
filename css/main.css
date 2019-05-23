@@ -37,6 +37,17 @@ button:focus {
   }
 }
 
+@keyframes navLinkFadeDesktop {
+  from {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @keyframes heroFadeH1 {
   from {
     opacity: 0;
@@ -79,8 +90,11 @@ nav {
   background-color: #080400;
   position: sticky;
   top: 0px;
-  opacity: .98;
   z-index: 1;
+}
+
+.desktop-nav {
+  display: none;
 }
 
 .logo {
@@ -209,9 +223,6 @@ nav {
 }
 
 /* ==================ABOUT==================== */
-
-.about-grid {
-}
 
 .about-main{
   display: flex;
@@ -373,9 +384,6 @@ nav {
   justify-content: center;
   align-items: center;
   text-align: center;
-  position: sticky;
-  bottom: 0;
-  opacity: .96;  
 }
 
 .footer-sticky-h3 {
@@ -419,54 +427,73 @@ nav {
   color: #E1E5F2;
 }
 
+/* ==================MEDIA-QUERIES==================== */
+
+@media (min-width: 1024px) {
+
+  /* ==================HEADER==================== */
+
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #080400;
+  }
+  .logo {
+    color: #E1E5F2;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2em;
+  }
+
+  .desktop-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    list-style: none;
+    padding-left: 0;
+
+  }
+
+  .desktop-nav li {
+    text-transform: uppercase;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+    transform: translateX(1000px);
+  }
+
+  .desktop-nav li a {
+    padding-bottom: .5em;
+    transition: all .5s ease;
+  }
+
+  .desktop-nav li a:hover {
+    color: #272D2D;
+  }
 
 
+  .burger div {
+    display: none;
+  }
 
+/* ==================HERO==================== */
 
-
-
-
-
-
-/* DESKTOP VIEW
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 8vh;
-  background-color: #080400;
+.hero {
+  background-image: url('../img/desktop-hero.jpg');
+  background-attachment: fixed;
 }
-.logo {
-  color: #E1E5F2;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-family: 'Playfair Display', serif;
-  font-size: 1.2em;
+
+
+
+
+
+
+
+
+
+
+
 }
-.nav-links{
-  display: flex;
-  justify-content: space-around;
-  width: 60%;
-  padding-left: 0;
-}
-.nav-links li {
-  list-style: none;
-}
-.nav-links a {
-  color: #E1E5F2;
-  letter-spacing: 2px;
-  font-weight: lighter;
-}
-.burger div {
-  width: 24px;
-  height: 3px;
-  background-color: #E1E5F2;
-  margin: 5px;
-      clip-path: polygon(14% 7%, 100% 0%, 83% 100%, 0% 100%);
-}
-.burger div:nth-last-child(1) {
-  width: 33px;
-}
-.burger div:nth-last-child(2) {
-  width: 29px;
-} */

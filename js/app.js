@@ -18,4 +18,20 @@ const navSlide = () => {
     });
   });
 }
+
+const desktopSlide = () => {
+  const desktopNav = document.querySelector('.desktop-nav');
+  const desktopLinks = document.querySelectorAll('.desktop-nav li');
+
+    desktopLinks.forEach((link, index) => {
+      if(link.style.animation){
+        link.style.animation = ''
+      } else {
+        link.style.animation = `navLinkFadeDesktop 2s ease forwards ${index / 7 + 0.9}s`
+      }
+    });
+}
+
+window.onLoad(desktopSlide());
+
 navSlide();
