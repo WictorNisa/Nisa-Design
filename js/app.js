@@ -32,6 +32,6 @@ const desktopSlide = () => {
     });
 }
 
-window.onLoad(desktopSlide());
+desktopSlide();
 
 navSlide();
