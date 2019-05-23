@@ -11,7 +11,6 @@ html, body {
 body{
   display: grid;
   grid-template-columns: minmax(300px, 1fr);
-
 }
 
 
@@ -161,6 +160,7 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-attachment: scroll;
 }
 
 .logo-h1{
@@ -235,6 +235,44 @@ nav {
   padding: 0 1em 1em 1em;
 }
 
+/* ==================DESKTOP-PARALLAX==================== */
+
+.parallax-desktop{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('../img/parallax-img.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: scroll;
+}
+
+.season-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 .8em 0 .8em;
+  height: 300px;
+  font-weight: lighter;
+}
+
+.season-h2{
+  color: #2D2D2D;
+  padding-bottom: .5em;
+  border-bottom: 1px solid #2D2D2D;
+  text-transform: uppercase;
+}
+
+.season-p{
+  font-size: 1.1em;
+  padding: 0 1em 0 1em;
+  color: #E1E5F2;
+}
+
 /* ==================GALLERY==================== */
 
 .gallery-grid{
@@ -244,6 +282,7 @@ nav {
   grid-gap: 20px;
   width: 90%;
   margin: auto;
+  padding-bottom: 3em;
 }
 
 .gallery-info{
@@ -324,31 +363,61 @@ nav {
   color: #2D2D2D;
 }
 
+/* ==================FOOTER==================== */
 
-
-
-
-
-
-
-
-/* ==================MODAL==================== */
-
-.modal{
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0,0,0,0.5);
+.footer-sticky {
+  background-color: #080400;
+  height: 50px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  display: none;
+  text-align: center;
+  position: sticky;
+  bottom: 0;
+  opacity: .96;  
 }
 
+.footer-sticky-h3 {
+  color: #E1E5F2;
+  text-align: center;
+  font-size: .8em;
+}
 
+.main-footer {
+  background-color: #080400;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 2em;
+}
+
+.footer-h2,
+.footer-p {
+  color: #E1E5F2;
+}
+
+.footer-p{
+  padding: 0 1em 0 1em;
+}
+
+.mail-a {
+  cursor: pointer;
+  color: #E1E5F2;
+}
+
+.footer-h2 {
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+  border-bottom: 1px solid white;
+  padding-bottom: .5em;
+}
+
+.footer-phone {
+  color: #E1E5F2;
+}
 
 
 
