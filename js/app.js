@@ -44,7 +44,7 @@ modalButton.addEventListener('click', (e) => {
   modal.style.display = 'none';
 });
 
-setTimeout(openModal, 4000);
+// setTimeout(openModal, 6000);
 
 desktopSlide()
 
