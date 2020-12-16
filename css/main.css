@@ -169,7 +169,7 @@ nav {
 
 .hero {
   height: 100vh;
-  background-image: url('../img/hero6.jpg');
+  background-image: url('../img/desktop.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -177,11 +177,11 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-attachment: scroll;
+  background-attachment: fixed;
 }
 
 .logo-h1{
-  margin-top: 0;
+  margin: 0 auto 0 auto;
   font-size: 2.5em;
   font-family: 'Playfair Display', serif;
   color: #E1E5F2;
@@ -257,10 +257,10 @@ nav {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url('../img/parallax-img.jpg');
+  background-image: url('../img/parallax-img-desktop.jpg');
   background-position: center;
   background-size: cover;
-  background-attachment: scroll;
+  background-attachment: fixed;
 }
 
 .season-start {
@@ -547,7 +547,7 @@ nav {
 /* ==================HERO==================== */
 
 .hero {
-  background-image: url('../img/desktop-hero.jpg');
+  background-image: url('../img/desktop.jpg');
   background-attachment: fixed;
 }
 
