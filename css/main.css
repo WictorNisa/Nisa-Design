@@ -178,6 +178,7 @@ nav {
   justify-content: center;
   align-items: center;
   background-attachment: fixed;
+  position: relative;
 }
 
 .logo-h1{
@@ -249,6 +250,14 @@ nav {
   padding: 0 1em 1em 1em;
 }
 
+.history-img{
+  display: block;
+  width: 70%;
+  margin-bottom: 3em;
+  -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+  box-shadow: 5px 5px 15px 5px #000000;
+}
+
 /* ==================DESKTOP-PARALLAX==================== */
 
 .parallax-desktop{
@@ -256,11 +265,12 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 120vh;
   background-image: url('../img/parallax-img-desktop.jpg');
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  position: relative;
 }
 
 .season-start {
@@ -270,12 +280,17 @@ nav {
   align-items: center;
   text-align: center;
   padding: 0 .8em 0 .8em;
-  height: 300px;
+  height: 250px;
   font-weight: lighter;
+  width: 80%;
+  background-color: rgba(45,45,45,.6);
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
 .season-h2{
-  color: #2D2D2D;
+  color: white;
   padding-bottom: .5em;
   border-bottom: 1px solid #2D2D2D;
   text-transform: uppercase;
@@ -305,17 +320,15 @@ nav {
 /* ==================GALLERY==================== */
 
 .gallery-grid{
-  display: grid;
-  grid-template-columns: repeat(3, minmax(100px, 1fr));
-  grid-template-rows: 200px repeat(2, minmax(150px, 1fr));
-  grid-gap: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   width: 90%;
   margin: auto;
   padding-bottom: 3em;
 }
 
 .gallery-info{
-  grid-column: 1 / 4;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -324,12 +337,15 @@ nav {
 }
 
 .photo-contain{
+  width: 90%;
+  height: 100%;
   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  margin-bottom: 2em;
 }
 
 .port-view{
   width: 100%;
-  height: 100%;
+  height: 110%;
 }
 
 
@@ -344,6 +360,17 @@ nav {
 .gallery-p {
   font-family: 'Playfair Display', serif;
   color: #2D2D2D;
+}
+
+/* ==================DIVIDER==================== */
+
+.divider-section{
+  height: 60vh;
+  width: 100%;
+  background-image: url('../img/divider.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
 }
 
 /* ==================FOOTER==================== */
@@ -486,11 +513,15 @@ nav {
     color: #141414;
   }
   /* ==================GALLERY==================== */
-  .gallery-grid {
-    grid-template-columns: repeat(3, minmax(200px, 250px));
-    grid-template-rows: 200px repeat(2, minmax(300px, 1fr));
-    grid-gap: 20px;
+  .gallery-grid{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+    padding-bottom: 3em;
   }
+
 }
 
 @media (min-width: 1024px) {
@@ -555,8 +586,17 @@ nav {
 /* ==================ABOUT==================== */
 
 .about-main {
-  height: 400px;
+  height: 120vh;
   padding: 0 3em 0 3em;
+}
+
+.history-img{
+  display: block;
+  width: 20%;
+  height: 50%;
+  margin-bottom: 3em;
+  -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+  box-shadow: 5px 5px 15px 5px #000000;
 }
 
 /* ==================PARALLAX-DESKTOP==================== */
@@ -564,6 +604,7 @@ nav {
 .parallax-desktop {
   background-image: url('../img/parallax-img-desktop.jpg');
   background-attachment: fixed;
+  height: 140vh;
 }
 
 .season-h2 {
@@ -571,20 +612,30 @@ nav {
   border-bottom: 1px solid #E1E5F2;
 }
 
+.season-start{
+  width: 50%;
+}
+
 /* ==================GALLERY==================== */
 
-.gallery-grid {
-  grid-template-columns: repeat(3, minmax(300px, 1fr));
-  grid-template-rows: 200px repeat(2, minmax(300px, 1fr));
-  grid-gap: 35px;
+.gallery-grid{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
 }
 
-.gallery-info {
-  grid-column: 1 / 4;
+.photo-contain{
+  width: 350px;
+  margin-right: 2em;
 }
+
 
 .port-view{
   transition: all 1s ease;
+  width: 350px;
+  height: 400px;
 }
 
 .port-view:hover{
@@ -625,3 +676,181 @@ nav {
 
 
 }
+
+
+/* ==================CUSTOM KEYFRAMES AND CLASSES==================== */
+
+
+.custom-shape-divider-bottom-1608628825 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1608628825 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.custom-shape-divider-bottom-1608628825 .shape-fill {
+  fill: #2D2D2D;
+}
+
+/** For tablet devices **/
+@media (min-width: 768px) and (max-width: 1023px) {
+  .custom-shape-divider-bottom-1608628825 svg {
+      width: calc(196% + 1.3px);
+      height: 144px;
+  }
+}
+
+.custom-shape-divider-top-1608629784 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1608629784 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.custom-shape-divider-top-1608629784 .shape-fill {
+  fill: #2D2D2D;
+}
+
+/** For tablet devices **/
+@media (min-width: 768px) and (max-width: 1023px) {
+  .custom-shape-divider-top-1608629784 svg {
+      width: calc(196% + 1.3px);
+      height: 144px;
+  }
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .custom-shape-divider-top-1608629784 svg {
+      width: calc(295% + 1.3px);
+      height: 150px;
+  }
+}.custom-shape-divider-top-1608629784 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1608629784 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.custom-shape-divider-top-1608629784 .shape-fill {
+  fill: #2D2D2D;
+}
+
+/** For tablet devices **/
+@media (min-width: 768px) and (max-width: 1023px) {
+  .custom-shape-divider-top-1608629784 svg {
+      width: calc(196% + 1.3px);
+      height: 144px;
+  }
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .custom-shape-divider-top-1608629784 svg {
+      width: calc(295% + 1.3px);
+      height: 150px;
+  }
+}
+.custom-shape-divider-bottom-1608636606 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1608636606 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.custom-shape-divider-bottom-1608636606 .shape-fill {
+  fill: #FFFFFF;
+}
+
+/** For tablet devices **/
+@media (min-width: 768px) and (max-width: 1023px) {
+  .custom-shape-divider-bottom-1608636606 svg {
+      width: calc(196% + 1.3px);
+      height: 144px;
+  }
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .custom-shape-divider-bottom-1608636606 svg {
+      width: calc(100% + 1.3px);
+      height: 96px;
+  }
+}
+
+.custom-shape-divider-top-1608659294 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1608659294 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.custom-shape-divider-top-1608659294 .shape-fill {
+  fill: #FFFFFF;
+}
+
+/** For tablet devices **/
+@media (min-width: 768px) and (max-width: 1023px) {
+  .custom-shape-divider-top-1608659294 svg {
+      width: calc(196% + 1.3px);
+      height: 144px;
+  }
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .custom-shape-divider-top-1608659294 svg {
+      width: calc(100% + 1.3px);
+      height: 79px;
+  }
+}
+
+

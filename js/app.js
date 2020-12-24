@@ -49,3 +49,4 @@ modalButton.addEventListener('click', (e) => {
 desktopSlide()
 
 navSlide();
+
